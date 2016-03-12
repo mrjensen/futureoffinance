@@ -17,7 +17,7 @@ using System.Collections;
 using UnityEngine;
 using System.Collections;
 
-public class DoText : MonoBehaviour {
+public class Coins : MonoBehaviour {
 	private Vector3 startingPosition;
 	private int someInt = 1;
 	private int accountValue = 2500;
@@ -32,7 +32,7 @@ public class DoText : MonoBehaviour {
 		int randResult = Random.Range (0, 200);
 		if (someInt == randResult) {
 			int calcResult = accountValue + Random.Range(-500, 550);
-			GetComponent<TextMesh>().text = accountText + calcResult;
+			GetComponent<TextMesh>().text = accountText + calcResult + " kr.";
 		}
 	}
 }
