@@ -13,26 +13,42 @@ using System.Collections;
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
-using UnityEngine;
-using System.Collections;
-
-public class DoText : MonoBehaviour {
+[RequireComponent(typeof(Collider))]
+public class ObjectFocus : MonoBehaviour {
 	private Vector3 startingPosition;
-	private int someInt = 1;
-	private int accountValue = 2500;
-	private string accountText = "Balance: ";
-	private Vector3 oriSize;
-
+	private Vector3	startingScaling;
 
 	void Start() {
+		startingPosition = transform.localPosition;
+		startingScaling = transform.localScale;
+		SetGazedAt(false);
 	}
 
-	void LateUpdate() {
-		int randResult = Random.Range (0, 200);
-		if (someInt == randResult) {
-			int calcResult = accountValue + Random.Range(-500, 550);
-			GetComponent<TextMesh>().text = accountText + calcResult;
+	//	void LateUpdate() {
+	//		Cardboard.SDK.UpdateState();
+	//		if (Cardboard.SDK.BackButtonPressed) {
+	//			Application.Quit();
+	//		}
+	//	}
+
+	public void SetGazedAt(bool gazedAt) {
+		if (gazedAt) {
+			GetComponent<Renderer> ().transform.localScale += new Vector3 (0.5F, 0.5F, 0);
+		} else {
+			GetComponent<Renderer> ().transform.localScale = startingScaling;
 		}
 	}
+
+	public void Reset() {
+		transform.localPosition = startingPosition;
+	}
+
+	public void ToggleVRMode() {
+		Cardboard.SDK.VRModeEnabled = !Cardboard.SDK.VRModeEnabled;
+	}
+
+	public void TeleportRandomly() {
+		transform.localScale += new Vector3 (0.5F, 0.5F, 0);
+	}
+
 }
