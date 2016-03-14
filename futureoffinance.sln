@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{E052BB67-A19B-D5D2-FD95-1BC03259DD5A}") = "futureoffinance", "Assembly-CSharp.csproj", "{0951C389-C675-0EDF-8E35-7193AF7C56E2}"
+EndProject
+Project("{E052BB67-A19B-D5D2-FD95-1BC03259DD5A}") = "futureoffinance", "Assembly-CSharp-Editor.csproj", "{B204C3BC-270F-6785-6E37-E89CDFF4B17A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0951C389-C675-0EDF-8E35-7193AF7C56E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0951C389-C675-0EDF-8E35-7193AF7C56E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0951C389-C675-0EDF-8E35-7193AF7C56E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0951C389-C675-0EDF-8E35-7193AF7C56E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B204C3BC-270F-6785-6E37-E89CDFF4B17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B204C3BC-270F-6785-6E37-E89CDFF4B17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B204C3BC-270F-6785-6E37-E89CDFF4B17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B204C3BC-270F-6785-6E37-E89CDFF4B17A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
